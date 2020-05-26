@@ -21,6 +21,9 @@ public class CityResource {
     }
 
 
+    /**
+     * get all
+     */
     @RequestMapping(
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE
@@ -30,6 +33,9 @@ public class CityResource {
     }
 
 
+    /**
+     * get city by id
+     */
     @RequestMapping(
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE,
@@ -40,11 +46,40 @@ public class CityResource {
     }
 
 
+    /**
+     * insert city
+     */
     @RequestMapping(
             method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE
     )
     public void insertNewCity(@RequestBody City city) {
         cityService.persistNewCity(city.getIbge_id(), city);
+    }
+
+
+    /**
+     * update city
+     */
+    @RequestMapping(
+            method = RequestMethod.PUT,
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            path = "{id}"
+    )
+    public void updateCity(@PathVariable("id") String id, @RequestBody City city) {
+        cityService.updateCityById(city.getIbge_id(), city);
+    }
+
+
+    /**
+     *  delete city
+     */
+    @RequestMapping(
+            method = RequestMethod.DELETE,
+            path = "{id}",
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public void deleteStudent(@PathVariable("id") String id) {
+        cityService.deleteCityById(id);
     }
 }
