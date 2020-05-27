@@ -18,10 +18,6 @@ public class CidadeService {
     @Autowired
     public CidadeService(CidadeRepository cidadeRepository) throws IOException {
         this.cidadeRepository = cidadeRepository;
-
-        cidadeRepository.save(new City(
-                "7", "city_name", "city_uf", "false", "longitute", "latitude", "no_accents", "alt_names", "micro", "meso"
-        ));
     }
 
     public City addCity(City city) {

@@ -33,7 +33,9 @@ public class CsvReader {
     }
 
     public List<City> setData() throws IOException {
-        ArrayList<String[]> dadosArquivo = readFile("C:\\Users\\jadef\\IdeaProjects\\cidades-api\\src\\main\\resources\\cidades.csv");
+        System.out.println(System.getProperty("user.dir"));
+
+        ArrayList<String[]> dadosArquivo = readFile("src\\main\\resources\\cidades.csv");
         ArrayList<City> list = new ArrayList<>();
 
         for (int i = 1; i < dadosArquivo.size(); i++) {
