@@ -12,6 +12,7 @@ import java.util.Optional;
  */
 public interface CityRepository {
 
+
     City selectCityById(String id);
 
     int insertNewCity(String id, City city);
@@ -21,4 +22,6 @@ public interface CityRepository {
     int updateCityById(String id, City cityUpdate);
 
     int deleteCityById(String id);
+
 }
+
