@@ -12,24 +12,6 @@ import java.util.List;
 @RequestMapping("api/v2/cidades")
 public class CidadeResource {
 
-//    private final CidadeRepository cidadeRepository;
-//
-//    public CidadeResource(CidadeRepository cidadeRepository) {
-//        this.cidadeRepository = cidadeRepository;
-//    }
-//
-//    @GetMapping
-//    public List findAll() {
-//        return cidadeRepository.findAll();
-//    }
-//
-//    @GetMapping(path = {"/{id}"})
-//    public ResponseEntity findById(@PathVariable String id) {
-//        return cidadeRepository.findById(id)
-//                .map(record -> ResponseEntity.ok().body(record))
-//                .orElse(ResponseEntity.notFound().build());
-//    }
-
     private final CidadeService cidadeService;
 
     @Autowired
@@ -38,7 +20,9 @@ public class CidadeResource {
     }
 
 
-
+    /**
+     * get all
+     */
     @RequestMapping(
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE
@@ -48,7 +32,9 @@ public class CidadeResource {
     }
 
 
-
+    /**
+     * get city by id
+     */
     @RequestMapping(
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE,
@@ -60,13 +46,18 @@ public class CidadeResource {
     }
 
 
+    /**
+     * is capital
+     */
+//    @GetMapping(path = "{id}")
+//    public boolean isCityCapital(@PathVariable("id") String id) {
+//        return cidadeService.isCapital(id);
+//    }
 
-    @GetMapping(path = "{id}")
-    public boolean isCityCapital(@PathVariable("id") String id) {
-        return cidadeService.isCapital(id);
-    }
 
-
+    /**
+     * create city
+     */
     @PostMapping
     public City create(@RequestBody City city) {
         return cidadeService.addCity(city);

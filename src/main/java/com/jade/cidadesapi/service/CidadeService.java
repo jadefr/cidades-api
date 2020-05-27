@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,11 +16,12 @@ public class CidadeService {
     private CidadeRepository cidadeRepository;
 
     @Autowired
-    public CidadeService(CidadeRepository cidadeRepository) {
+    public CidadeService(CidadeRepository cidadeRepository) throws IOException {
         this.cidadeRepository = cidadeRepository;
-//        cidadeRepository.save(new City(
-//                "1", "city_name", "city_uf", "false", "longitute", "latitude", "no_accents", "alt_names", "micro", "meso"
-//        ));
+
+        cidadeRepository.save(new City(
+                "7", "city_name", "city_uf", "false", "longitute", "latitude", "no_accents", "alt_names", "micro", "meso"
+        ));
     }
 
     public City addCity(City city) {
