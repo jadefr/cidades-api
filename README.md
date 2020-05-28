@@ -17,6 +17,33 @@ Os dados — provenientes de um documento CSV — são transformados em objetos 
 * MySql
 * Hateoas
 
+# Estrutura Base
+
+      
+      src
+        ├ java
+        |  ├── api
+        |  |  └── CityResource.java 
+        |  |  
+        |  ├── model
+        |  |  ├── City.java
+        |  |  └── CityNotFoundException.java 
+        |  |  
+        |  ├── repository
+        |  |  ├── CityRepository.java
+        |  |  └── CsvReader.java 
+        |  |       
+        |  ├── service
+        |  |  └── CityService.java 
+        |  |
+        |  └── CidadesApiApplication.java
+        |  
+        └── resources 
+            ├── application.properties
+            └── arquivo.csv
+            
+           
+
 # API
 
 | HTTP  | Métodos do Controller | URI | Parâmetros |
