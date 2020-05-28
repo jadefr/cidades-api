@@ -19,7 +19,7 @@ Os dados — provenientes de um documento CSV — são transformados em objetos 
 
 # API
 
-| HTTP  | Controller Methods | URI | Exemplo |
+| HTTP  | Controller Methods | URI | Parâmetros |
 | ------------- | ------------- | ------------- | ------------- | 
 | GET  | getAllCities  | localhost:8080/api/v2/cidades  | |
 | GET  | getCityById  | localhost:8080/api/v2/cidades/{id}  | |
