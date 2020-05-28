@@ -11,3 +11,4 @@ API REST sobre cidades do Brasil
 | POST  | addCity  | localhost:8080/api/v2/cidades  |
 | PUT  | updateCity  | localhost:8080/api/v2/cidades/{id}  |
 | DELETE  | deleteCity  | localhost:8080/api/v2/cidades/{id}  |
+| GET  | getCapitals  | localhost:8080/api/v2/cidades?capital=true  |
