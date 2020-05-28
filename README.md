@@ -2,7 +2,7 @@
 
 O framework **Spring Boot** foi utilizado para fazer uma API sobre cidades do Brasil.
 
-Os dados, provenientes de um documento CSV, são transformados em objetos da classe _City_ e, então, persistidos num banco de dados MySQL, através do _Spring Data JPA_.
+Os dados — provenientes de um documento CSV — são transformados em objetos da classe _City_ e, então, persistidos num banco de dados MySQL, através do _Spring Data JPA_.
 
 # Tech Stack
 
