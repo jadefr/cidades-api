@@ -27,3 +27,5 @@ Os dados — provenientes de um documento CSV — são transformados em objetos 
 | PUT  | updateCity  | localhost:8080/api/v2/cidades/{id}  |
 | DELETE  | deleteCity  | localhost:8080/api/v2/cidades/{id}  |
 | GET  | getCapitals  | localhost:8080/api/v2/cidades?capitais  |
+| GET  | getSortedCapitals  | localhost:8080/api/v2/cidades?capitais&sort=asc 
+| | | localhost:8080/api/v2/cidades?capitais&sort=des  |
