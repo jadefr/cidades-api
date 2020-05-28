@@ -19,7 +19,7 @@ Os dados — provenientes de um documento CSV — são transformados em objetos 
 
 # API
 
-| HTTP  | Controller Methods | URI | Parâmetros |
+| HTTP  | Métodos do Controller | URI | Parâmetros |
 | ------------- | ------------- | ------------- | ------------- | 
 | GET  | getAllCities  | localhost:8080/api/v2/cidades  | |
 | GET  | getCityById  | localhost:8080/api/v2/cidades/{id}  | |
@@ -28,4 +28,5 @@ Os dados — provenientes de um documento CSV — são transformados em objetos 
 | DELETE  | deleteCity  | localhost:8080/api/v2/cidades/{id}  | |
 | GET  | getCapitals  | localhost:8080/api/v2/cidades?capitais  | |
 | GET  | getSortedCapitals  | localhost:8080/api/v2/cidades?capitais&sort | sort=asc ou sort=des |
+| GET  | getTotal  | localhost:8080/api/v2/cidades?total |  |
 
