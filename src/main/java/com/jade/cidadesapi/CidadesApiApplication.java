@@ -1,7 +1,7 @@
 package com.jade.cidadesapi;
 
 import com.jade.cidadesapi.model.City;
-import com.jade.cidadesapi.repository.CidadeRepository;
+import com.jade.cidadesapi.repository.CityRepository;
 import com.jade.cidadesapi.repository.CsvReader;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -18,7 +18,7 @@ public class CidadesApiApplication {
     }
 
     @Bean
-    CommandLineRunner init(CidadeRepository repository) {
+    CommandLineRunner init(CityRepository repository) {
         return args -> {
             repository.deleteAll();
             repository.
