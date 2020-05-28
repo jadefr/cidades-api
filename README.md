@@ -15,6 +15,7 @@ Os dados — provenientes de um documento CSV — são transformados em objetos 
 * JPA
 * Lombok
 * MySql
+* Hateoas
 
 # API
 
