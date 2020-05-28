@@ -20,7 +20,9 @@ public class CidadeResource {
     }
 
 
+
     /**
+     * GET
      * get all
      */
     @RequestMapping(
@@ -32,7 +34,9 @@ public class CidadeResource {
     }
 
 
+
     /**
+     * GET
      * get city by id
      */
     @RequestMapping(
@@ -46,6 +50,7 @@ public class CidadeResource {
     }
 
 
+
     /**
      * is capital
      */
@@ -55,12 +60,43 @@ public class CidadeResource {
 //    }
 
 
+
     /**
-     * create city
+     * POST
+     * insert city
      */
     @PostMapping
     public City create(@RequestBody City city) {
         return cidadeService.addCity(city);
+    }
+
+
+
+    /**
+     * PUT
+     * update city
+     */
+    @RequestMapping(
+            method = RequestMethod.PUT,
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            path = "{id}"
+    )
+    public void updateCity(@PathVariable("id") String id, @RequestBody City city) {
+        cidadeService.updateCityById(id, city);
+    }
+
+
+    /**
+     * DELETE
+     * delete city
+     */
+    @RequestMapping(
+            method = RequestMethod.DELETE,
+            path = "{id}",
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public void deleteCity(@PathVariable("id") String id) {
+        cidadeService.deleteCity(id);
     }
 
 }

@@ -1,10 +1,9 @@
-package com.jade.cidadesapi.service;
+package com.jade.cidadesapi.repository;
 
 import com.jade.cidadesapi.model.City;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.Reader;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -15,14 +14,12 @@ import java.util.List;
 
 public class CsvReader {
 
-    final static Charset ENCODING = StandardCharsets.ISO_8859_1;
-    BufferedReader reader;
-    Reader importer;
+    private final static Charset ENCODING = StandardCharsets.ISO_8859_1;
 
-    private ArrayList<String[]> readFile(String fileName) throws IOException {
+    private ArrayList<String[]> readFile() throws IOException {
         ArrayList<String[]> dadosArquivo = new ArrayList<>();
-        Path path = Paths.get(fileName);
-        reader = Files.newBufferedReader(path, ENCODING);
+        Path path = Paths.get("src\\main\\resources\\cidades.csv");
+        BufferedReader reader = Files.newBufferedReader(path, ENCODING);
         String line;
         while ((line = reader.readLine()) != null) {
             line = line.replaceAll("\"", "");
@@ -33,9 +30,7 @@ public class CsvReader {
     }
 
     public List<City> setData() throws IOException {
-        System.out.println(System.getProperty("user.dir"));
-
-        ArrayList<String[]> dadosArquivo = readFile("src\\main\\resources\\cidades.csv");
+        ArrayList<String[]> dadosArquivo = readFile();
         ArrayList<City> list = new ArrayList<>();
 
         for (int i = 1; i < dadosArquivo.size(); i++) {

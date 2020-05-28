@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CidadeRepository extends JpaRepository<City, String> {
+
+//    void updateCityById(String id, City cityUpdate);
 }
