@@ -17,9 +17,36 @@ Os dados — provenientes de um documento CSV — são transformados em objetos 
 * MySql
 * Hateoas
 
+# Estrutura Base
+
+      
+      src
+        ├ java
+        |  ├── api
+        |  |  └── CityResource.java 
+        |  |  
+        |  ├── model
+        |  |  ├── City.java
+        |  |  ├── CityNotFoundException.java 
+        |  |  └── CityReader.java 
+        |  |  
+        |  ├── repository
+        |  |  └── CityRepository.java
+        |  |       
+        |  ├── service
+        |  |  └── CityService.java 
+        |  |
+        |  └── CidadesApiApplication.java
+        |  
+        └── resources 
+            ├── application.properties
+            └── arquivo.csv
+            
+           
+
 # API
 
-| HTTP  | Controller Methods | URI | Parâmetros |
+| HTTP  | Métodos do Controller | URI | Parâmetros |
 | ------------- | ------------- | ------------- | ------------- | 
 | GET  | getAllCities  | localhost:8080/api/v2/cidades  | |
 | GET  | getCityById  | localhost:8080/api/v2/cidades/{id}  | |
@@ -28,4 +55,5 @@ Os dados — provenientes de um documento CSV — são transformados em objetos 
 | DELETE  | deleteCity  | localhost:8080/api/v2/cidades/{id}  | |
 | GET  | getCapitals  | localhost:8080/api/v2/cidades?capitais  | |
 | GET  | getSortedCapitals  | localhost:8080/api/v2/cidades?capitais&sort | sort=asc ou sort=des |
+| GET  | getTotal  | localhost:8080/api/v2/cidades?total |  |
 
