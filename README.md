@@ -70,6 +70,8 @@ São feitos os métodos que serão utilizados no controller. Estes métodos mani
 
 ### api/CityResource
 
+Controller.
+
 Implementa os métodos responsáveis pela comunicação HTTP request-response.
 
 ## API
