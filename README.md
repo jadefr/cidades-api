@@ -21,22 +21,22 @@ Os dados — provenientes de um documento CSV — são transformados em objetos 
 
       
       src
-        ├ java
-        |  ├── api
-        |  |  └── CityResource.java 
-        |  |  
-        |  ├── model
-        |  |  ├── City.java
-        |  |  ├── CityNotFoundException.java 
-        |  |  └── CityReader.java 
-        |  |  
-        |  ├── repository
-        |  |  └── CityRepository.java
-        |  |       
-        |  ├── service
-        |  |  └── CityService.java 
-        |  |
-        |  └── CidadesApiApplication.java
+        ├── java
+        |    ├── api
+        |    |  └── CityResource.java 
+        |    |  
+        |    ├── model
+        |    |  ├── City.java
+        |    |  ├── CityNotFoundException.java 
+        |    |  └── CityReader.java 
+        |    |  
+        |    ├── repository
+        |    |  └── CityRepository.java
+        |    |       
+        |    ├── service
+        |    |  └── CityService.java 
+        |    |
+        |    └── CidadesApiApplication.java
         |  
         └── resources 
             ├── application.properties
