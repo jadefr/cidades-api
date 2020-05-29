@@ -44,7 +44,33 @@ Os dados — provenientes de um documento CSV — são transformados em objetos 
             
 ## Arquitetura
 
-![Image of screenshot](https://raw.githubusercontent.com/jadefr/cidades-api/master/src/main/resources/img/cidades-api.png)           
+![Image of architecture](https://raw.githubusercontent.com/jadefr/cidades-api/master/src/main/resources/img/cidades-api.png)           
+
+## Classes
+
+Segue-se uma breve descrição de algumas classes.
+
+### model/City
+
+Representa a entidade que será mapeada à tabela do banco de dados.
+
+Por terem sido utilizadas as anotações @AllArgsConstructor e @NoArgsConstructor não se fez necessária a criação dos getters, setters e construtor.
+
+### repository/CityRepository
+
+É uma interface, anotada com @Repository, que estende a interface JpaRepository<T, ID> (no caso, <City, String>).
+
+Não é necessária a implementação de nenhum método.
+
+### service/CityService
+
+Instancia um objeto privado do CityRepository. 
+
+São feitos os métodos que serão utilizados no controller. Estes métodos manipulam o objeto da classe CityRepository.
+
+### api/CityResource
+
+Implementa os métodos responsáveis pela comunicação HTTP request-response.
 
 ## API
 
