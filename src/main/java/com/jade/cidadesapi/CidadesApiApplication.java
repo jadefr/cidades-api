@@ -2,7 +2,7 @@ package com.jade.cidadesapi;
 
 import com.jade.cidadesapi.model.City;
 import com.jade.cidadesapi.repository.CityRepository;
-import com.jade.cidadesapi.repository.CsvReader;
+import com.jade.cidadesapi.model.CityReader;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,21 +21,7 @@ public class CidadesApiApplication {
     CommandLineRunner init(CityRepository repository) {
         return args -> {
             repository.deleteAll();
-            repository.
-                    save(new City(
-                            "5",
-                            "city_name",
-                            "city_uf",
-                            "false",
-                            "longitute",
-                            "latitude",
-                            "no_accents",
-                            "alt_names",
-                            "micro",
-                            "meso"
-                    ));
-
-            List<City> listFromCsv = new CsvReader().setData();
+            List<City> listFromCsv = new CityReader().setData();
 
             for (City city : listFromCsv) {
                 repository.save(city);

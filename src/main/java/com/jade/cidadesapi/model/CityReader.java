@@ -1,4 +1,4 @@
-package com.jade.cidadesapi.repository;
+package com.jade.cidadesapi.model;
 
 import com.jade.cidadesapi.model.City;
 
@@ -12,7 +12,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CsvReader {
+public class CityReader {
 
     private final static Charset ENCODING = StandardCharsets.ISO_8859_1;
 

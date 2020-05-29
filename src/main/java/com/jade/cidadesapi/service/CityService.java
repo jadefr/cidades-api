@@ -73,7 +73,6 @@ public class CityService {
         for (City city: cityList) {
             if (city.getCapital().equals("true")) {
                 capitals.add(city);
-//                System.out.println(city.getName());
             }
         }
 
