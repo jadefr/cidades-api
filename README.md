@@ -4,12 +4,12 @@ O framework **Spring Boot** foi utilizado para fazer uma API sobre cidades do Br
 
 Os dados — provenientes de um documento CSV — são transformados em objetos da classe _City_ e, então, persistidos num banco de dados MySQL, através do _Spring Data JPA_.
 
-# Tech Stack
+## Tech Stack
 
 * Java 8
 * SQL
 
-# Dependências
+## Dependências
 
 * Web
 * JPA
@@ -17,7 +17,7 @@ Os dados — provenientes de um documento CSV — são transformados em objetos 
 * MySql
 * Hateoas
 
-# Estrutura Base
+## Estrutura Base
 
       
       src
@@ -42,9 +42,11 @@ Os dados — provenientes de um documento CSV — são transformados em objetos 
             ├── application.properties
             └── arquivo.csv
             
-           
+## Arquitetura
 
-# API
+![Image of screenshot](https://raw.githubusercontent.com/jadefr/quiz/master/src/assets/quiz.jpg)           
+
+## API
 
 | HTTP  | Métodos do Controller | URI | Parâmetros |
 | ------------- | ------------- | ------------- | ------------- | 
