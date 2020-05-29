@@ -66,7 +66,7 @@ Não é necessária a implementação de nenhum método.
 
 Instancia um objeto privado do CityRepository. 
 
-São feitos os métodos que serão utilizados no controller. Estes métodos manipulam o objeto da classe CityRepository. São utilizadas **lambda expressions**.
+São feitos os métodos que serão utilizados no controller. Estes métodos manipulam o objeto da classe CityRepository. São utilizadas ***lambda expressions***.
 
 ### api/CityResource
 
@@ -101,27 +101,11 @@ Implementa os métodos responsáveis pela comunicação HTTP request-response.
 
     # Dialeto SQL para melhorar o SQL gerado pelo Hibernate
     spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
+    
+    # Hibernate ddl auto (create, create-drop, validate, update)
+    spring.jpa.hibernate.ddl-auto=update 
 
 
-Código para gerar a tabela, em SQL:
+Código para gerar o banco, em SQL:
 
     CREATE DATABASE cidades_db;
-    
-    USE cidades_db;
-    
-    CREATE city
-    (
-        ibge_id           varchar(7)   NOT NULL,
-        uf                varchar(100) NULL,
-        name              varchar(100) NULL,
-        capital           varchar(100) NULL,
-        lon               varchar(100) NULL,
-        lat               varchar(100) NULL,
-        no_accents        varchar(100) NULL,
-        alternative_names varchar(100) NULL,
-        microregion       varchar(100) NULL,
-        mesoregion        varchar(100) NULL,
-        PRIMARY KEY (ibge_id)
-    ) ENGINE = InnoDB
-      DEFAULT CHARSET = utf8;
-
