@@ -66,7 +66,7 @@ Não é necessária a implementação de nenhum método.
 
 Instancia um objeto privado do CityRepository. 
 
-São feitos os métodos que serão utilizados no controller. Estes métodos manipulam o objeto da classe CityRepository.
+São feitos os métodos que serão utilizados no controller. Estes métodos manipulam o objeto da classe CityRepository. São utilizadas **lambda expressions**.
 
 ### api/CityResource
 
