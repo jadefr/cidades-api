@@ -44,7 +44,7 @@ Os dados — provenientes de um documento CSV — são transformados em objetos 
             
 ## Arquitetura
 
-![Image of screenshot](https://raw.githubusercontent.com/jadefr/quiz/master/src/assets/quiz.jpg)           
+![Image of screenshot](https://raw.githubusercontent.com/jadefr/cidades-api/master/src/main/resources/img/cidades-api.png)           
 
 ## API
 
