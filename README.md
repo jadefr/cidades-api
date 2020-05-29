@@ -27,11 +27,11 @@ Os dados — provenientes de um documento CSV — são transformados em objetos 
         |  |  
         |  ├── model
         |  |  ├── City.java
-        |  |  └── CityNotFoundException.java 
+        |  |  ├── CityNotFoundException.java 
+        |  |  └── CityReader.java 
         |  |  
         |  ├── repository
-        |  |  ├── CityRepository.java
-        |  |  └── CsvReader.java 
+        |  |  └── CityRepository.java
         |  |       
         |  ├── service
         |  |  └── CityService.java 
